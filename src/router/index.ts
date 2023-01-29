@@ -45,7 +45,7 @@ const routes: Array<RouteRecordRaw> = [
     component: categoriasPage,
     children: [
       {
-        path: '/productos-categorias',
+        path: '/:category',
         name: 'categorias',
         component: ProductosPorCategoriaPage
       }

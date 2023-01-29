@@ -5,10 +5,11 @@
       v-for="categoria in lista"
       :key="categoria.id"
       class="lista__item">
-        <a class ="lista__item__link"
-        href="#">
+        <router-link
+        class ="lista__item__link"
+        :to="{name: 'categorias', params: {'category': categoria.name_unique} }">
         {{ categoria.name }}
-        </a>
+        </router-link>
       </li>
     </ul>
   </div>

@@ -10,7 +10,7 @@
             </li>
              <li class="header__menu__item">
                 <router-link
-                 :to= "{ name: 'categorias'}"
+                 :to= "{ name: 'categorias', params: {'category': ' '}}"
                  class="header__menu__item__link">
                     Categories
                 </router-link>
