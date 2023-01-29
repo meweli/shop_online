@@ -9,9 +9,11 @@
                 </router-link>
             </li>
              <li class="header__menu__item">
-                <a href="#" class="header__menu__item__link">
+                <router-link
+                 :to= "{ name: 'categorias'}"
+                 class="header__menu__item__link">
                     Categories
-                </a>
+                </router-link>
             </li>
             <li class="header__menu__item">
                 <router-link to="/login">Login</router-link>

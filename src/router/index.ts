@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import productsPage from '@/views/products/productsPage.vue'
-import categoriesPage from '@/views/categories/categoriesPage.vue'
+import categoriesPage from '@/views/categories/categoriasPage.vue'
 import loginPage from '@/views/user/login.vue'
 import register from '@/views/user/register.vue'
 import userID from '@/views/user/userID.vue'
+import categoriasPage from '@/views/categories/categoriasPage.vue'
+import ProductosPorCategoriaPage from '@/views/products/ProductosPorCategoriaPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -38,6 +40,17 @@ const routes: Array<RouteRecordRaw> = [
     name: 'userID',
     component: userID
   },
+  {
+    path: '/categorias',
+    component: categoriasPage,
+    children: [
+      {
+        path: '/productos-categorias',
+        name: 'categorias',
+        component: ProductosPorCategoriaPage
+      }
+    ]
+  }
 ]
 
 const router = createRouter({
